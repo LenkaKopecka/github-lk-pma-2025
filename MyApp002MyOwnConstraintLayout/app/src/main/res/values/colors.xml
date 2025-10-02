@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="btnAddColor">#00C8F4</color>
+    <color name="btnClearColor">#FF0F00</color>
+    <color name="tvTitleColor">#2196F3</color>
+</resources>
