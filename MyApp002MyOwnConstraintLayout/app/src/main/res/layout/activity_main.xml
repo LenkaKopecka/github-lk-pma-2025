@@ -51,7 +51,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:max="2000"
-        android:progress="0"
+        android:progress="20"
         app:layout_constraintTop_toBottomOf="@id/tvResult"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
