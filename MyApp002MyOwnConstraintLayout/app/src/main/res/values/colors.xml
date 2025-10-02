@@ -2,7 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="btnAddColor">#00C8F4</color>
-    <color name="btnClearColor">#FF0F00</color>
+    <color name="btnAddColor">#2196F3</color>
+    <color name="btnClearColor">#A6A0A0</color>
     <color name="tvTitleColor">#2196F3</color>
+    <color name="progressBarColor">#3F51B5</color>
 </resources>
