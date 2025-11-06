@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jméno"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Věk"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <CheckBox
+        android:id="@+id/cbAdult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Potvrzení, že jsem dospělák."
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uložit"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Načíst"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
