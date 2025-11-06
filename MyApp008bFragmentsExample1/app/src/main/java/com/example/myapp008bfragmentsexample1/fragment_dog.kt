@@ -1,18 +1,23 @@
-package com.example.animalfragmentsapp
+package com.example.animalsapp
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 
-class Fragment1 : Fragment() {
+class DogFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // fragment1.xml bude obsahovat obrázek kočky a text
-        return inflater.inflate(R.layout.fragment1, container, false)
+        return inflater.inflate(R.layout.fragment_dog, container, false)
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() = DogFragment()
     }
 }
+
