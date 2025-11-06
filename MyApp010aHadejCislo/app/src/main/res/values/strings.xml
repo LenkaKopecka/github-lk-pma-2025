@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Uhádni číslo</string>
+    <string name="app_title">Uhádni číslo 1 až 10</string>
+    <string name="hint_tip">Tvůj tip</string>
+    <string name="btn_check">Zkontroluj</string>
+
+    <string name="msg_empty">Zadej číslo.</string>
+    <string name="msg_range">Číslo musí být 1–10.</string>
+    <string name="msg_correct">Správně!</string>
+    <string name="msg_wrong">Vedle!</string>
+</resources>
