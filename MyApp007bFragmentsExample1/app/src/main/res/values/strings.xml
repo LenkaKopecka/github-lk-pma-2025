@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyApp007aFragments</string>
+    <string name="hello_blank_fragment_1">Pozdrav z Fragmentu 1.</string>
+    <string name="hello_blank_fragment_2">Pozdrav z Fragmentu 2.</string>
+
+    <string name="gallery_image_desc">Obrázek z galerie</string>
+    <string name="detail_image_desc">Detail obrázku</string>
+    <string name="default_description">Popis obrázku</string>
+</resources>
