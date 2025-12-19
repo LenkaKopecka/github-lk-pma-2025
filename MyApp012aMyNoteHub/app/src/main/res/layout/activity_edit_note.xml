@@ -29,18 +29,19 @@
             android:inputType="textMultiLine"
             />
 
+        <EditText
+            android:id="@+id/etEditCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Upravit kategorii"
+            android:layout_marginTop="12dp"
+            />
+
         <Button
             android:id="@+id/btnSaveChanges"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Uložit změny"
             android:layout_marginTop="20dp" />
-        <TextView
-            android:id="@+id/tvNoteId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ID Poznámky: "
-            android:textSize="16sp"
-            android:layout_marginBottom="12dp"/>
     </LinearLayout>
 </ScrollView>

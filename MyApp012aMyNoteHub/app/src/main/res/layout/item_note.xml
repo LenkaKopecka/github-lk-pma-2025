@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -17,6 +18,15 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvNoteId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: 1"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
             android:id="@+id/tvNoteTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,29 +42,34 @@
             android:text="Ukázkový obsah..."
             android:textSize="14sp"/>
 
-        <!-- Zobrazení ID poznámky -->
         <TextView
-            android:id="@+id/tvNoteId"
-            android:layout_width="match_parent"
+            android:id="@+id/tvNoteCategory"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ID: "
-            android:textSize="14sp"
+            android:text="Kategorie"
+            android:textSize="12sp"
+            android:textStyle="italic"
             android:layout_marginTop="4dp"
-            android:textColor="@android:color/darker_gray"/>
+            android:background="@drawable/category_background"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 
-    <!-- EDIT ikona -->
+    <!-- EDIT icon -->
     <ImageView
         android:id="@+id/ivEdit"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:padding="6dp"
         android:src="@drawable/outline_edit_24"
-        app:tint="#4CAF50"
+        app:tint="#3F51B5"
         android:contentDescription="Upravit poznámku"
         android:layout_marginEnd="12dp"/>
 
-    <!-- DELETE ikona -->
+    <!-- DELETE icon -->
     <ImageView
         android:id="@+id/ivDelete"
         android:layout_width="32dp"
@@ -65,4 +80,3 @@
         android:contentDescription="Smazat poznámku" />
 
 </LinearLayout>
-

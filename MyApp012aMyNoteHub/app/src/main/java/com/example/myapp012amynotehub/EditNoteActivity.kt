@@ -1,7 +1,10 @@
 package com.example.myapp012amynotehub
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.myapp012amynotehub.data.Note
 import com.example.myapp012amynotehub.data.NoteDao
@@ -14,6 +17,7 @@ class EditNoteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEditNoteBinding
     private lateinit var noteDao: NoteDao
+    private var noteId: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,15 +27,8 @@ class EditNoteActivity : AppCompatActivity() {
 
         noteDao = NoteHubDatabaseInstance.getDatabase(this).noteDao()
 
-        // Načteme ID z Intentu a zobrazíme ho v TextView
-        val noteId = intent.getIntExtra("note_id", -1)
-
-        // Pokud je ID platné (není -1), nastavíme ho na TextView
-        if (noteId != -1) {
-            binding.tvNoteId.text = "ID Poznámky: $noteId"
-        } else {
-            binding.tvNoteId.text = "ID Poznámky: Není k dispozici"
-        }
+        // Získáme ID poznámky z Intentu
+        noteId = intent.getIntExtra("note_id", -1)
 
         // Načteme poznámku z DB
         lifecycleScope.launch {
@@ -40,6 +37,7 @@ class EditNoteActivity : AppCompatActivity() {
                 if (note != null) {
                     binding.etEditTitle.setText(note.title)
                     binding.etEditContent.setText(note.content)
+                    binding.etEditCategory.setText(note.category)
                 }
             }
         }
@@ -48,11 +46,13 @@ class EditNoteActivity : AppCompatActivity() {
         binding.btnSaveChanges.setOnClickListener {
             val updatedTitle = binding.etEditTitle.text.toString()
             val updatedContent = binding.etEditContent.text.toString()
+            val updatedCategory = binding.etEditCategory.text.toString()
 
             val updatedNote = Note(
                 id = noteId,
                 title = updatedTitle,
-                content = updatedContent
+                content = updatedContent,
+                category = updatedCategory
             )
 
             lifecycleScope.launch(Dispatchers.IO) {
@@ -60,6 +60,6 @@ class EditNoteActivity : AppCompatActivity() {
                 finish()
             }
         }
+
     }
 }
-
