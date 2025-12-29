@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tvQuestionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otázka 1/5"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/tvQuestionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zde bude text otázky..."
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp"/>
+
+    <Button android:id="@+id/btnA" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Odpověď A"/>
+    <Button android:id="@+id/btnB" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Odpověď B"/>
+    <Button android:id="@+id/btnC" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Odpověď C"/>
+    <Button android:id="@+id/btnD" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Odpověď D"/>
+
+</LinearLayout>
